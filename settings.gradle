@@ -1,0 +1,2 @@
+rootProject.name = "Tonkatsu SRS"
+include ':app'
