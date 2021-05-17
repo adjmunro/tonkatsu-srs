@@ -1,8 +1,8 @@
-package nz.tonkatsu.core
+package nz.tonkatsu.core.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import nz.tonkatsu.core.ui.main.MainFragment
+import androidx.appcompat.app.AppCompatActivity
+import nz.tonkatsu.core.R
 
 class MainActivity : AppCompatActivity() {
 

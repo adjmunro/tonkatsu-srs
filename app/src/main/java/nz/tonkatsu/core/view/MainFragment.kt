@@ -1,12 +1,13 @@
-package nz.tonkatsu.core.ui.main
+package nz.tonkatsu.core.view
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import nz.tonkatsu.core.R
+import nz.tonkatsu.core.viewmodel.MainViewModel
 
 class MainFragment : Fragment() {
 

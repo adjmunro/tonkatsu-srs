@@ -1,4 +1,4 @@
-package nz.tonkatsu.core.ui.main
+package nz.tonkatsu.core.viewmodel
 
 import androidx.lifecycle.ViewModel
 
