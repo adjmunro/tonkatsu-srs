@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import nz.tonkatsu.core.R
+import nz.tonkatsu.core.io.ImporterCore6kTsv
 import nz.tonkatsu.core.viewmodel.MainViewModel
 
 class MainFragment : Fragment() {
@@ -21,6 +22,8 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        ImporterCore6kTsv.import(requireContext())
+
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 

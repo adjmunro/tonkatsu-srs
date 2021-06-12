@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Tonkatsu SRS</string>
+    <string name="error_happened">An error occurred!</string>
+    <string name="file_saved">File saved.</string>
 </resources>

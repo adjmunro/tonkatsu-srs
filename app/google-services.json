@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "834041604157",
+    "project_id": "tonkatsu-srs",
+    "storage_bucket": "tonkatsu-srs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834041604157:android:690bb853101e2615e7a254",
+        "android_client_info": {
+          "package_name": "nz.tonkatsu.core"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834041604157-6o46pjll3vdf4sb62ljknhi61pfhuqs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZVQ88aG69RMYxbs9Y899jwJoWwCsFHDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834041604157-6o46pjll3vdf4sb62ljknhi61pfhuqs3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,41 +1,36 @@
 package nz.tonkatsu.core.io
 
-/*
-val f = """
-一	いち	one
-二	に	two
-三	さん	three
-四	よん	four
-五	ご	five
-六	ろく	six
-七	なな	seven
-八	はち	eight
-九	きゅう	nine
-十	じゅう	ten
-"""
+import android.content.Context
+import android.util.Log
+import nz.tonkatsu.core.R
+import nz.tonkatsu.core.model.entity.Word
 
-data class Word(
-    val kanji: String,
-    val kana: String,
-    val english: String
-)
-
-fun main() {
-    val words: List<Word> = f.trim().split('\n').map { line ->
-        line.split('\t').let {
-            Word(
-                kanji = it[0],
-                kana = it[1],
-                english = it[2]
-            )
-        }
-    }
-    println(words.map {it.kanji})
-}
- */
 /**
  * Importer core6k tsv
  *
  * @constructor Create empty Importer core6k tsv
  */
-class ImporterCore6kTsv
+class ImporterCore6kTsv {
+
+    companion object {
+        private const val TAG: String = "ImporterCore6kTsv"
+
+        fun import(context: Context) {
+            context.resources.openRawResource(R.raw.core6k)
+                .bufferedReader(charset = Charsets.UTF_8).lineSequence().forEach { line ->
+                    line.trim().split('\t').let {
+                        val w = Word(
+                            english = it[9],
+                            jlpt = it[6].removePrefix("JLPT").toIntOrNull(),
+                            kana = it[8],
+                            kanji = it[7],
+                            sound = it[10].removeSurrounding("[sound:", ".mp3]"),
+                            pos = it[11]
+                        )
+                        Log.d(TAG, w.toString())
+                    }
+                }
+        }
+    }
+
+}
